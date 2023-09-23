@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
     "target": "es2018",
-    "lib": ["esnext"],
+    "lib": ["esnext", "DOM", "ES6"],
     "module": "esnext",
     "moduleResolution": "node",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "strict": true,
