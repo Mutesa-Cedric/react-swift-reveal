@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es2018",
     "lib": ["esnext", "DOM", "ES6"],
+    "jsx": "react",
     "module": "esnext",
     "moduleResolution": "node",
     "paths": {
