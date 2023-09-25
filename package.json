@@ -46,11 +46,15 @@
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
   },
+  "dependencies": {
+    "react": "^18.2.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^1.0.0-beta.0",
     "@antfu/ni": "^0.21.8",
     "@antfu/utils": "^0.7.6",
     "@types/node": "^20.6.3",
+    "@types/react": "^18.2.22",
     "bumpp": "^9.2.0",
     "eslint": "^8.49.0",
     "eslint-define-config": "^1.23.0",
