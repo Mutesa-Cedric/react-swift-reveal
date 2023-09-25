@@ -1,6 +1,7 @@
+/* eslint-disable import/no-mutable-exports */
 // aliases and interfaces for the default values (functions and data structures) of this library
 interface EffectMap {
-    [effect: string]: number
+  [effect: string]: number
 }
 
 type InsertRuleFunction = (rule: string) => number | undefined
@@ -8,7 +9,7 @@ type InsertRuleFunction = (rule: string) => number | undefined
 type CascadeFunction = (i: number, start: number, end: number, duration: number, total: number) => number
 
 interface AnimationFunction {
-    (effect: string): string
+  (effect: string): string
 }
 
 type WindowRequestAnimationFrame = (cb: () => void) => NodeJS.Timeout | number
@@ -23,20 +24,19 @@ export const namespace = 'react-swiftreveal'
 // default values
 
 export const defaults = { duration: 1000, delay: 0, count: 1 }
-let ssr = true
-let observerMode = false
-
-let raf: WindowRequestAnimationFrame = cb => setTimeout(cb, 66)
-const disableSsr: () => void = () => {
+export let ssr = true
+export let observerMode = false
+export let raf: WindowRequestAnimationFrame = cb => setTimeout(cb, 66)
+export const disableSsr: () => void = () => {
   ssr = false
 }
-let fadeOutEnabled = false
-const ssrFadeout: SsrFadeoutFunction = (enable) => {
+export let fadeOutEnabled = false
+export const ssrFadeout: SsrFadeoutFunction = (enable) => {
   fadeOutEnabled = enable
 }
-let globalHide = false
-let ie10 = false
-let collapseend: Event | undefined
+export let globalHide = false
+export let ie10 = false
+export let collapseend: Event | undefined
 
 // values for animation manangement
 let counter = 1
@@ -56,7 +56,7 @@ const insertRule: InsertRuleFunction = (rule) => {
 }
 
 // calculate animation timings based on logarithmic scale.
-const cascade: CascadeFunction = (i, start, end, duration, total) => {
+export const cascade: CascadeFunction = (i, start, end, duration, total) => {
   const minv = Math.log(duration)
   const maxv = Math.log(total)
   const scale = (maxv - minv) / (end - start)
@@ -78,7 +78,7 @@ const animation: AnimationFunction = (effect) => {
 }
 
 //   hide all elements within a given namespace
-const hideAll: HideAllFunction = () => {
+export const hideAll: HideAllFunction = () => {
   if (globalHide)
     return
   globalHide = true
@@ -91,18 +91,18 @@ const hideAll: HideAllFunction = () => {
 // check if the code is being executed in the browser environment
 if (typeof window !== 'undefined' && window.name !== 'nodejs' && window.document && typeof navigator !== 'undefined') {
   observerMode = 'IntersectionObserver' in window
-        && 'IntersectionObserverEntry' in window
-        && 'intersectionRatio' in window.IntersectionObserverEntry.prototype
-        && (/\{\s*\[native code\]\s*\}/).test(`${IntersectionObserver}`)
+    && 'IntersectionObserverEntry' in window
+    && 'intersectionRatio' in window.IntersectionObserverEntry.prototype
+    && (/\{\s*\[native code\]\s*\}/).test(`${IntersectionObserver}`)
   raf = window.requestAnimationFrame || raf
   ssr = window.document.querySelectorAll('div[data-reactroot]').length > 0
   if (navigator.appVersion.includes('MSIE 10'))
     ie10 = true
   if (ssr && 'performance' in window
-        && 'timing' in window.performance
-        && 'domContentLoadedEventEnd' in window.performance.timing
-        && window.performance.timing.domLoading
-        && Date.now() - window.performance.timing.domLoading < 300)
+    && 'timing' in window.performance
+    && 'domContentLoadedEventEnd' in window.performance.timing
+    && window.performance.timing.domLoading
+    && Date.now() - window.performance.timing.domLoading < 300)
     ssr = false
   if (ssr)
     window.setTimeout(disableSsr, 1500)
