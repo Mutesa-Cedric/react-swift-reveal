@@ -13,7 +13,7 @@ import RevealBase from '../lib/Base.js'
  * @param {React.ReactNode} children
  * @returns {React.ReactNode}
  */
-export default function wrapper(props: { when: any; in: any }, inEffect: any, outEffect: any, children: string | number | boolean |
+export default function wrapper(props: { when: any; in: any, }, inEffect: any, outEffect: any, children: string | number | boolean |
     React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined) {
   if ('in' in props)
     props.when = props.in

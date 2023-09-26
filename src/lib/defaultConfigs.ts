@@ -23,7 +23,12 @@ export const namespace = 'react-swiftreveal'
 
 // default values
 
-export const defaults = { duration: 1000, delay: 0, count: 1 }
+export const defaults: {
+  duration: number;
+  delay: number;
+  count: number;
+  [key: string]: any;
+} = { duration: 1000, delay: 0, count: 1 }
 export let ssr = true
 export let observerMode = false
 export let raf: WindowRequestAnimationFrame = cb => setTimeout(cb, 66)
