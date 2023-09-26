@@ -1,6 +1,5 @@
 import React from 'react'
 
-// @ts-expect-error(type declaration missing)
 import RevealBase from '../lib/Base.js'
 
 /**
@@ -8,8 +7,6 @@ import RevealBase from '../lib/Base.js'
  * @param {object} props
  * @param {boolean} props.when
  * @param {boolean} props.in
- * @param {string} props.inEffect
- * @param {string} props.outEffect
  * @param {React.ReactNode} children
  * @returns {React.ReactNode}
  * TODO : fix prop types

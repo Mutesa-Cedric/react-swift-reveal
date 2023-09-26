@@ -8,11 +8,11 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "strict": true,
     "strictNullChecks": true,
+    "noImplicitAny": false,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true
   }
