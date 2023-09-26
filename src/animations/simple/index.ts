@@ -6,3 +6,5 @@ export * from "./RubberBand";
 export * from "./Flash";
 export * from "./Tada";
 export * from "./Swing";
+export * from "./Spin";
+export * from "./Wobble";
