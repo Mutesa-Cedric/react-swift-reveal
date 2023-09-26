@@ -12,6 +12,7 @@ import RevealBase from '../lib/Base.js'
  * @param {string} props.outEffect
  * @param {React.ReactNode} children
  * @returns {React.ReactNode}
+ * TODO : fix prop types
  */
 export default function wrapper(props: { when: any; in: any, }, inEffect: any, outEffect: any, children: string | number | boolean |
     React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined) {
