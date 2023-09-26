@@ -8,7 +8,7 @@ const rule = `
     }
 
     to {
-    transform: rotate(0deg);
+       transform: rotate(0deg);
     }
 `;
 
