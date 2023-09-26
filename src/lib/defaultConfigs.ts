@@ -64,7 +64,7 @@ export const cascade: CascadeFunction = (i, start, end, duration, total) => {
 }
 
 // generate unique names for animation effects.
-const animation: AnimationFunction = (effect) => {
+export const animation: AnimationFunction = (effect) => {
   if (!sheet)
     return ''
   const rule = `@keyframes ${name + counter}{${effect}}`
