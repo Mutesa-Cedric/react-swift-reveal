@@ -29,7 +29,7 @@ function make() {
 }
 
 
-function Jump({ children, out, timeout, duration = defaults.duration, delay = defaults.delay, count = defaults.count, forever, ...props } = defaults) {
+function Jump({ children, _out, timeout, duration = defaults.duration, delay = defaults.delay, count = defaults.count, forever, ...props } = defaults) {
     const effect = { make, duration: timeout === undefined ? duration : timeout, delay, forever, count, style: { animationFillMode: 'both', } };
     // @ts-expect-error(some props are not allowed, this will be fixed later)
     return wrapper(props, effect, false, children);
