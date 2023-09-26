@@ -9,3 +9,4 @@ export * from "./Swing";
 export * from "./Spin";
 export * from "./Wobble";
 export * from "./Pop";
+export * from "./Flip";
