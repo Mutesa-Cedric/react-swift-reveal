@@ -2,8 +2,11 @@
 import wrapper from '@/HOC/wrapper'
 import { animation, defaults } from '@/lib/defaultConfigs'
 
+// lookup table
 const lookup = {}
 function make(reverse, { left, right, up, down, top, bottom, mirror, opposite }) {
+
+  // checksum for lookup table
   const checksum = (left ? 1 : 0) | (right ? 2 : 0) | (top || down ? 4 : 0) | (bottom || up ? 8 : 0) | (mirror ? 16 : 0) | (opposite ? 32 : 0) | (reverse ? 64 : 0);
   if (lookup.hasOwnProperty(checksum))
     return lookup[checksum]
@@ -28,7 +31,9 @@ function make(reverse, { left, right, up, down, top, bottom, mirror, opposite })
 
 function Rotate({
   children, _out, forever,
-  timeout, duration = defaults.duration, delay = defaults.delay, count = defaults.count, ...props
+  timeout, duration = defaults.duration,
+  delay = defaults.delay,
+  count = defaults.count, ...props
 } = defaults) {
   const effect = {
     make,
