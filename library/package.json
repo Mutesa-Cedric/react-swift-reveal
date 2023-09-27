@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@8.7.6",
-  "description": "_description_",
+  "description": "The easiest way to add reveal animations to your React applications. it includes Both on scroll and simple reveal animations.",
   "author": "Mutesa Cedric <mutesacedric@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/Mutesa-Cedric/react-swiftReveal.git#readme",
@@ -12,7 +12,19 @@
     "url": "git+https://github.com/Mutesa-Cedric/react-swiftReveal.git.git"
   },
   "bugs": "https://github.com/Mutesa-Cedric/react-swiftReveal.git/issues",
-  "keywords": [],
+  "keywords": [
+    "scroll animations",
+    "reveal animations",
+    "reveal",
+    "scroll",
+    "animations",
+    "reactreveal",
+    "react animations",
+    "react scroll animations",
+    "react reveal animations",
+    "react scroll reveal animations",
+    "react scroll reveal"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
