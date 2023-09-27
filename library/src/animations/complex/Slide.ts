@@ -1,6 +1,9 @@
 /* eslint-disable no-prototype-builtins */
 import wrapper from "../../HOC/wrapper";
 import { animation, defaults } from "../../lib/defaultConfigs";
+import type { IAnimationProps } from "../../types";
+
+interface Props extends IAnimationProps { };
 
 const lookup = {};
 function make(reverse, { left, right, up, down, top, bottom, big, mirror, opposite, }) {
@@ -23,8 +26,14 @@ function make(reverse, { left, right, up, down, top, bottom, big, mirror, opposi
     return lookup[checksum];
 }
 
-export default function Slide({ children, _out, forever,
-    timeout, duration = defaults.duration, delay = defaults.delay, count = defaults.count, ...props } = defaults) {
+export default function Slide({ children,
+    // eslint-disable-next-line unused-imports/no-unused-vars
+    out,
+    forever,
+    timeout,
+    duration = defaults.duration,
+    delay = defaults.delay,
+    count = defaults.count, ...props }: Props = defaults) {
     const effect = {
         make,
         duration: timeout === undefined ? duration : timeout,

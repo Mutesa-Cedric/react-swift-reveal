@@ -1,6 +1,9 @@
 /* eslint-disable no-prototype-builtins */
 import wrapper from "../../HOC/wrapper";
 import { animation, defaults } from "../../lib/defaultConfigs";
+import type { IAnimationProps } from "../../types";
+
+interface Props extends IAnimationProps { };
 
 const lookup = {}
 function make(reverse, { left, right, up, down, top, bottom, mirror, opposite }) {
@@ -53,9 +56,10 @@ function make(reverse, { left, right, up, down, top, bottom, mirror, opposite })
 }
 
 export default function Zoom({
-    children, _out, forever,
+    // eslint-disable-next-line unused-imports/no-unused-vars
+    children, out, forever,
     timeout, duration = defaults.duration, delay = defaults.delay, count = defaults.count, ...props
-} = defaults) {
+}: Props = defaults) {
     const effect = {
         make,
         duration: timeout === undefined ? duration : timeout,

@@ -1,5 +1,6 @@
 import wrapper from "../../HOC/wrapper";
 import { animation, defaults } from "../../lib/defaultConfigs";
+import type { IAnimationProps } from "../../types";
 
 const rule = `
   from, to {
@@ -19,15 +20,16 @@ const rule = `
 const name = animation(rule);
 
 export default function Shake({
-    children,
-    _out,
-    timeout,
-    duration = defaults.duration,
-    delay = defaults.delay,
-    count = defaults.count,
-    forever, ...props
-} = defaults) {
-    const effect = { make: () => name, duration: timeout === undefined ? duration : timeout, delay, forever, count, style: { animationFillMode: 'both', } };
-    // @ts-expect-error(some props are not allowed, this will be fixed later)
-    return wrapper(props, effect, false, children);
+  children,
+  // eslint-disable-next-line unused-imports/no-unused-vars
+  out,
+  timeout,
+  duration = defaults.duration,
+  delay = defaults.delay,
+  count = defaults.count,
+  forever, ...props
+}: IAnimationProps = defaults) {
+  const effect = { make: () => name, duration: timeout === undefined ? duration : timeout, delay, forever, count, style: { animationFillMode: 'both', } };
+  // @ts-expect-error(some props are not allowed, this will be fixed later)
+  return wrapper(props, effect, false, children);
 };

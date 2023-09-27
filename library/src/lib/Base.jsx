@@ -1,7 +1,7 @@
 /* eslint-disable max-statements-per-line */
 /* eslint-disable no-void */
 import React from 'react'
-import { bool, element, func, number, object, oneOf, oneOfType, shape, string } from 'prop-types'
+// import { bool, element, func, number, object, oneOf, oneOfType, shape, string } from 'prop-types'
 import { cascade, collapseend, disableSsr, fadeOutEnabled, globalHide, hideAll, namespace, observerMode, raf, ssr } from './defaultConfigs'
 
 // import Step from './lib/Step';
@@ -17,39 +17,39 @@ const
     style: object.isRequired,
     reverse: bool,
   })
-const propTypes = {
-  // when: any,
-  // spy: any,
-  // margin: number,
-  collapse: bool, // oneOfType([bool, shape({ tag: string, props: object })]),
-  collapseEl: element,
-  cascade: bool,
-  wait: number,
-  //    step: oneOfType([instanceOf(Step), string]),
-  force: bool,
-  disabled: bool,
-  appear: bool,
-  enter: bool,
-  exit: bool,
-  fraction: number,
-  // children: element.isRequired,
-  refProp: string,
-  innerRef: func,
-  onReveal: func,
-  // onEnter: func,
-  // onEntering: func,
-  // onEntered: func,
-  // onExit: func,
-  // onExiting: func,
-  // onExited: func,
-  unmountOnExit: bool,
-  mountOnEnter: bool,
-  inEffect: inOut.isRequired,
-  outEffect: oneOfType([inOut, oneOf([false])]).isRequired,
-  ssrReveal: bool,
-  collapseOnly: bool,
-  ssrFadeout: bool,
-}
+// const propTypes = {
+//   // when: any,
+//   // spy: any,
+//   // margin: number,
+//   collapse: bool, // oneOfType([bool, shape({ tag: string, props: object })]),
+//   collapseEl: element,
+//   cascade: bool,
+//   wait: number,
+//   //    step: oneOfType([instanceOf(Step), string]),
+//   force: bool,
+//   disabled: bool,
+//   appear: bool,
+//   enter: bool,
+//   exit: bool,
+//   fraction: number,
+//   // children: element.isRequired,
+//   refProp: string,
+//   innerRef: func,
+//   onReveal: func,
+//   // onEnter: func,
+//   // onEntering: func,
+//   // onEntered: func,
+//   // onExit: func,
+//   // onExiting: func,
+//   // onExited: func,
+//   unmountOnExit: bool,
+//   mountOnEnter: bool,
+//   inEffect: inOut.isRequired,
+//   outEffect: oneOfType([inOut, oneOf([false])]).isRequired,
+//   ssrReveal: bool,
+//   collapseOnly: bool,
+//   ssrFadeout: bool,
+// }
 const defaultProps = {
   fraction: 0.2,
   // when: true,
@@ -502,7 +502,7 @@ class RevealBase extends React.Component {
   }
 }
 
-RevealBase.propTypes = propTypes
+// RevealBase.propTypes = propTypes
 RevealBase.defaultProps = defaultProps
 RevealBase.contextTypes = contextTypes
 RevealBase.displayName = 'RevealBase'

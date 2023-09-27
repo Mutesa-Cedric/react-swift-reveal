@@ -1,5 +1,6 @@
 import wrapper from "../../HOC/wrapper";
 import { animation, defaults } from "../../lib/defaultConfigs";
+import type { IAnimationProps } from "../../types";
 
 const rule = `
     from {
@@ -19,11 +20,12 @@ function make() {
 
 
 export default function Spin({ children,
-    _out,
+    // eslint-disable-next-line unused-imports/no-unused-vars
+    out,
     timeout,
     duration = defaults.duration,
     delay = defaults.delay, count = defaults.count,
-    forever, ...props } = defaults) {
+    forever, ...props }: IAnimationProps = defaults) {
     const effect = { make, duration: timeout === undefined ? duration : timeout, delay, forever, count, style: { animationFillMode: 'both', } };
     // @ts-expect-error(some props are not allowed. this will be fixed later)
     return wrapper(props, effect, false, children, true);

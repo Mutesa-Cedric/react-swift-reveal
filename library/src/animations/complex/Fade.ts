@@ -1,6 +1,12 @@
 /* eslint-disable no-prototype-builtins */
 import wrapper from "../../HOC/wrapper";
 import { animation, defaults } from "../../lib/defaultConfigs";
+import type { IAnimationProps } from "../../types";
+
+interface Props extends IAnimationProps {
+    distance?: string;
+    big?: boolean;
+}
 
 
 const lookup = {};
@@ -25,13 +31,14 @@ function make(reverse, { distance, left, right, up, down, top, bottom, big, mirr
 }
 
 function Fade({ children,
-    _out,
+    // eslint-disable-next-line unused-imports/no-unused-vars
+    out,
     forever,
     timeout,
     duration = defaults.duration,
     delay = defaults.delay,
     count = defaults.count,
-    ...props } = defaults, context = false) {
+    ...props }: Props = defaults, context = false) {
     const effect = {
         make,
         duration: timeout === undefined ? duration : timeout,

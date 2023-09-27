@@ -1,17 +1,8 @@
 import type { ReactNode } from "react"
 import wrapper from "../../HOC/wrapper";
 import { animation, defaults } from "../../lib/defaultConfigs";
+import type { IAnimationProps } from "../../types";
 
-interface PulseProps {
-    children: ReactNode;
-    out?: boolean;
-    timeout?: number;
-    duration?: number;
-    delay?: number;
-    count?: number;
-    forever?: boolean;
-    [key: string]: any;
-}
 
 
 // animation rules
@@ -36,13 +27,14 @@ function make() {
 
 export default function Pulse({
     children,
-    // out,
+    // eslint-disable-next-line unused-imports/no-unused-vars
+    out,
     timeout,
     duration = defaults.duration,
     delay = defaults.delay,
     count = defaults.count,
     forever, ...props
-}: PulseProps) {
+}: IAnimationProps = defaults) {
     const effect = { make, duration: timeout === undefined ? duration : timeout, delay, forever, count, style: { animationFillMode: 'both', } };
     // @ts-expect-error(some props are not allowed, this will be fixed later)
     return wrapper(props, effect, false, children, true);

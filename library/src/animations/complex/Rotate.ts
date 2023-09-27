@@ -1,7 +1,10 @@
 /* eslint-disable no-prototype-builtins */
 import wrapper from "../../HOC/wrapper";
 import { animation, defaults } from "../../lib/defaultConfigs";
+import type { IAnimationProps } from "../../types";
 
+
+interface Props extends IAnimationProps { };
 // lookup table
 const lookup = {}
 function make(reverse, { left, right, up, down, top, bottom, mirror, opposite }) {
@@ -30,11 +33,16 @@ function make(reverse, { left, right, up, down, top, bottom, mirror, opposite })
 }
 
 function Rotate({
-  children, _out, forever,
-  timeout, duration = defaults.duration,
+  children,
+  // eslint-disable-next-line unused-imports/no-unused-vars
+  out,
+  forever,
+  timeout,
+  duration = defaults.duration,
   delay = defaults.delay,
-  count = defaults.count, ...props
-} = defaults) {
+  count = defaults.count,
+  ...props
+}: Props = defaults) {
   const effect = {
     make,
     duration: timeout === undefined ? duration : timeout,
