@@ -13,7 +13,7 @@
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.6.10",
-  "name": "react-swiftreveal-monorepo",
+  "name": "react-swift-reveal-monorepo",
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },

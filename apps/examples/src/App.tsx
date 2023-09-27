@@ -1,15 +1,13 @@
-import { Flip } from '../../../library/'
+import { Zoom } from '../../../library/'
 import './App.css'
 
-function App() {
+export default function App() {
 
   return (
     <>
-      <Flip>
-        <h1>Hi there </h1>
-      </Flip>
+      <Zoom duration={1200}>
+        <h1 className='text-red-500 text-4xl font-bold'>Hi there </h1>
+      </Zoom>
     </>
   )
 }
-
-export default App

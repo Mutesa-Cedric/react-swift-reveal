@@ -7,25 +7,25 @@ React-swiftReveal is a React component library and animation framework for anima
 with npm:
 
 ```bash
-npm install react-swiftreveal
+npm install react-swift-reveal
 ```
 
 with yarn:
 
 ```bash
-yarn add react-swiftreveal
+yarn add react-swift-reveal
 ```
 
 with pnpm:
 
 ```bash
-pnpm add react-swiftreveal
+pnpm add react-swift-reveal
 ```
 
 ## Usage
 
 ```javascript
-import { Fade } from "react-swiftreveal";
+import { Fade } from "react-swift-reveal";
 
 const App = () => {
   return (
@@ -39,7 +39,7 @@ const App = () => {
 or
 
 ```javascript
-import { Fade } from "react-swiftreveal";
+import { Fade } from "react-swift-reveal";
 
 const App = () => {
   return (
