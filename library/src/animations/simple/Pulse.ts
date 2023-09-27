@@ -1,7 +1,6 @@
 import type { ReactNode } from "react"
-import wrapper from "@/HOC/wrapper";
-import { animation, defaults } from "@/lib/defaultConfigs";
-
+import wrapper from "../../HOC/wrapper";
+import { animation, defaults } from "../../lib/defaultConfigs";
 
 interface PulseProps {
     children: ReactNode;

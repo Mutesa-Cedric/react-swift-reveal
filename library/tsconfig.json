@@ -5,9 +5,6 @@
     "jsx": "react",
     "module": "esnext",
     "moduleResolution": "node",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "strict": true,

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import RevealBase from '../lib/Base.js'
+import RevealBase from '../lib/Base.jsx'
 
 /**
  * this function is a wrapper for all the reveal components

@@ -1,6 +1,6 @@
 /* eslint-disable no-prototype-builtins */
-import wrapper from '@/HOC/wrapper'
-import { animation, defaults } from '@/lib/defaultConfigs'
+import wrapper from "../../HOC/wrapper";
+import { animation, defaults } from "../../lib/defaultConfigs";
 
 const lookup = {}
 
