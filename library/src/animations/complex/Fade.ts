@@ -6,6 +6,7 @@ import type { IAnimationProps } from "../../types";
 interface Props extends IAnimationProps {
     distance?: string;
     big?: boolean;
+    context?: boolean;
 }
 
 
@@ -38,7 +39,9 @@ function Fade({ children,
     duration = defaults.duration,
     delay = defaults.delay,
     count = defaults.count,
-    ...props }: Props = defaults, context = false) {
+    ...props }: Props = defaults,
+    // context = false
+) {
     const effect = {
         make,
         duration: timeout === undefined ? duration : timeout,
@@ -48,8 +51,10 @@ function Fade({ children,
         style: { animationFillMode: 'both', },
         reverse: props.left,
     };
+    // TODO : handle when context is true
+    // return context ? wrapper(props, effect, effect, children) : effect;
     // @ts-expect-error(prop types to be fixed later)
-    return context ? wrapper(props, effect, effect, children) : effect;
+    return wrapper(props, effect, effect, children);
 }
 
 export default Fade;
