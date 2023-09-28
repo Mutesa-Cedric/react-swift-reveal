@@ -1,0 +1,75 @@
+# Installation
+
+To get started with React-swiftReveal, follow these simple steps:
+
+1. **Installation via npm:**
+
+   ```bash
+   npm install react-swift-reveal
+   ```
+
+2. **Installation via yarn:**
+
+   ```bash
+   yarn add react-swift-reveal
+   ```
+
+3. **Installation via pnpm:**
+
+   ```bash
+   pnpm add react-swift-reveal
+   ```
+
+## Example Usage
+
+Let's dive into how you can use React-swiftReveal to add captivating animations to your components.
+
+### Using `<Fade>` with a HTML Element
+
+```jsx filename="demo.js" {3} copy
+import { Fade } from "react-swift-reveal";
+
+const App = () => {
+  return (
+    <Fade>
+      <h2>This is a heading</h2>
+    </Fade>
+  );
+};
+```
+
+In this example, we utilize the `<Fade>` component to animate a heading element (`<h2>`) as it enters the viewport. The heading will smoothly fade in, adding a stylish touch to your UI.
+
+### Using `<Fade>` with an Imported Component
+
+```jsx filename="demo.js" {3} copy
+import { Fade } from "react-swift-reveal";
+import MyComponent from "./MyComponent"; // Import your component here
+
+const App = () => {
+  return (
+    <Fade>
+      <MyComponent /> {/* Component to be animated */}
+    </Fade>
+  );
+};
+```
+
+### Passing Props to `<Fade>`
+
+```jsx filename="demo.js" {3} copy
+import { Fade } from "react-swift-reveal";
+import MyComponent from "./MyComponent"; // Import your component here
+
+const App = () => {
+  return (
+    <Fade duration={1000} delay={500} distance="30px">
+      <MyComponent /> {/* Component to be animated */}
+    </Fade>
+  );
+};
+```
+
+In this example, we import a custom component (`MyComponent`) and wrap it with the `<Fade>` component. As `MyComponent` enters the viewport, it will animate in with a graceful fade, enhancing the user experience.
+
+Feel free to explore the variety of animations available in React-swiftReveal to create visually stunning effects in your React applications.
