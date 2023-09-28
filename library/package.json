@@ -1,12 +1,12 @@
 {
   "name": "react-swift-reveal",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "packageManager": "pnpm@8.7.6",
-  "description": "The easiest way to add reveal animations to your React applications. it includes Both on scroll and simple reveal animations.",
+  "description": "The easiest way to add reveal animations to your React applications as the elements enter viewport. it includes Both on scroll and simple reveal animations.",
   "author": "Mutesa Cedric <mutesacedric@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/Mutesa-Cedric/react-swift-reveal.git#readme",
+  "homepage": "https://react-swift-reveal.vercel.app/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mutesa-Cedric/react-swift-reveal.git.git"
