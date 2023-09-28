@@ -1,0 +1,39 @@
+---
+title: Flip Animation
+---
+
+# Flip Animation
+
+The **Flip** animation adds a dynamic flip effect to elements, providing an engaging visual transition.
+
+## Usage
+
+To use the **Flip** animation, import it from `react-swift-reveal`:
+
+```jsx
+import { Flip } from 'react-swift-reveal';
+
+const App = () => {
+  return (
+    <Flip>
+      <div className="box">
+        This element will flip as it enters the viewport.
+      </div>
+    </Flip>
+  );
+};
+```
+
+## Props
+
+  
+
+The **Fade** animation accepts the following specific props:
+
+| Prop | Type | Description | Default |
+| ---- | ---- | ----------- | ------- |
+| `x` | `boolean` | If `true`, the element will flip on the x-axis. | `false` |
+| `y` | `boolean` | If `true`, the element will flip on the y-axis. | `false` |
+
+
+For Other common props, You can refer to the [Swift Reveal Props](/animations/props) documentation for a list of all available props.
