@@ -1,0 +1,56 @@
+---
+title: Animation Props
+---
+
+# Common Animation Props
+
+These props are applicable to all animations in the React-swift-reveal library. Here are the common props along with their default values:
+
+```jsx
+{
+  out: false,
+  left: false,
+  right: false,
+  top: false,
+  bottom: false,
+  mirror: false,
+  opposite: false,
+  timeout: 0,
+  duration: 1000,
+  delay: 0,
+  count: 1,
+  forever: false,
+  distance: '100%',
+  big: false,
+}
+```
+
+## Prop Details
+
+{/* table */}
+| Prop | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+| `out` | `boolean` | `false` | If `true`, the animation will be reversed. |
+| `left` | `boolean` | `false` | If `true`, the animation will start from the left. |
+| `right` | `boolean` | `false` | If `true`, the animation will start from the right. |
+| `top` | `boolean` | `false` | If `true`, the animation will start from the top. |
+| `bottom` | `boolean` | `false` | If `true`, the animation will start from the bottom. |
+| `mirror` | `boolean` | `false` | If `true`, the animation will be mirrored. |
+| `opposite` | `boolean` | `false` | If `true`, the animation will be the opposite of the direction specified. |
+| `timeout` | `number` | `0` | The time in milliseconds to wait before starting the animation. |
+| `duration` | `number` | `1000` | The time in milliseconds for the animation to complete. |
+| `delay` | `number` | `0` | The time in milliseconds to wait before starting the animation. |
+| `count` | `number` | `1` | The number of times the animation should repeat. |
+| `forever` | `boolean` | `false` | If `true`, the animation will repeat forever. |
+| `distance` | `string` | `'100%'` | The distance the animation should travel. |
+| `big` | `boolean` | `false` | If `true`, the animation will be bigger. |
+
+
+
+
+## Example Usage
+
+```jsx
+<Fade duration={1000} delay={0} count={1} />
+<Bounce top count={2} distance="20px" />
+<Slide left duration={800} delay={300} />

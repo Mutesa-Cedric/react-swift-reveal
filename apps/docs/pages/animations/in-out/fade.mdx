@@ -1,0 +1,47 @@
+---
+title : Fade Animation
+---
+# Fade Animation
+
+
+The **Fade** animation provides a smooth transition by gradually changing the opacity of an element.
+
+## Usage
+
+To use the **Fade** animation, import it from `react-swift-reveal`:
+
+```jsx
+import { Fade } from 'react-swift-reveal';
+
+const App = () => {
+  return (
+    <Fade>
+      <div className="box">
+        This element will fade in as it enters the viewport.
+      </div>
+    </Fade>
+  );
+};
+```
+
+{/* ## Example */}
+
+
+## Props
+
+{/*  distance?: string;
+    big?: boolean;
+    context?: boolean; */}
+  
+The **Fade** animation accepts the following specific props:
+
+| Prop | Type | Description | Default |
+| ---- | ---- | ----------- | ------- |
+| `context` | `boolean` | Whether the element should travel a distance relative to its parent element. | `false` |
+
+
+For Other common props, You can refer to the [Swift Reveal Props](/animations/props) documentation for a list of all available props.
+
+{/* ## CodeSandbox Example
+
+You can also try out the [Fade Animation on CodeSandbox](link-to-codesandbox). */}
