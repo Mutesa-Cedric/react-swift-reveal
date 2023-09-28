@@ -58,6 +58,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      react-swift-reveal:
+        specifier: ^1.0.0
+        version: 1.0.0
     devDependencies:
       '@types/react':
         specifier: ^18.2.15
@@ -6039,7 +6042,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       scroll-into-view-if-needed: 3.1.0
-      zod: 3.21.4
+      zod: 3.22.2
     dev: false
 
   /nextra@2.13.1(next@13.4.19)(react-dom@18.2.0)(react@18.2.0):
@@ -6679,6 +6682,12 @@ packages:
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
+
+  /react-swift-reveal@1.0.0:
+    resolution: {integrity: sha512-1HAXC2mUToMlqri6XynRPJvuCgYgboq7O3bDHj0bqD665kP6HTuX2raQHCAxLCQkFe52U100fgvv+3lwz3GwvQ==}
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}

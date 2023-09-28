@@ -1,6 +1,4 @@
-import { Zoom } from '../../../library/'
-import './App.css'
-
+import { Zoom } from 'react-swift-reveal'
 export default function App() {
 
   return (
