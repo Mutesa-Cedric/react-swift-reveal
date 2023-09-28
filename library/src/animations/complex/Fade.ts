@@ -4,8 +4,6 @@ import { animation, defaults } from "../../lib/defaultConfigs";
 import type { IAnimationProps } from "../../types";
 
 interface Props extends IAnimationProps {
-    distance?: string;
-    big?: boolean;
     context?: boolean;
 }
 

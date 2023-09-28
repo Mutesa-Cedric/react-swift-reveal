@@ -1,7 +1,7 @@
 {
   "name": "react-swift-reveal-docs",
   "version": "0.0.1",
-  "description": "Documentation for react-swiftreveal",
+  "description": "Documentation for react-swift-reveal",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

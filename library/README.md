@@ -1,6 +1,6 @@
 # React-swiftReveal
 
-React-swiftReveal is a React component library and animation framework for animating elements as they enter the viewport.
+React-swiftReveal is a React component library and animation framework for animating elements as they enter the viewport. you can learn more about the library [here(documention)](https://react-swift-reveal.vercel.app/)
 
 ## Installation
 
@@ -40,6 +40,7 @@ or
 
 ```javascript
 import { Fade } from "react-swift-reveal";
+import MyComponent from "./MyComponent";// component to be animated
 
 const App = () => {
   return (
