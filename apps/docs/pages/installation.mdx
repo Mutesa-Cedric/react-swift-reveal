@@ -70,6 +70,18 @@ const App = () => {
 };
 ```
 
-In this example, we import a custom component (`MyComponent`) and wrap it with the `<Fade>` component. As `MyComponent` enters the viewport, it will animate in with a graceful fade, enhancing the user experience.
+### Usage with next.js App Directory
 
-Feel free to explore the variety of animations available in React-swiftReveal to create visually stunning effects in your React applications.
+```jsx filename="app/page.jsx" {3} copy
+"use client";
+
+import { Fade } from "react-swift-reveal";
+
+export default function Home() {
+  return (
+    <Fade>
+      <h2>Next.js appDir</h2>
+    </Fade>
+  );
+}
+```

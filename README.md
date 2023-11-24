@@ -1,6 +1,6 @@
 # react-swift-reveal
 
-React-swiftReveal is a React component library and animation framework for animating elements as they enter the viewport.
+react-swift-reveal is a React component library and animation framework for animating elements as they enter the viewport.
 
 for more, check the [documentation](https://react-swift-reveal.vercel.app/)
 
@@ -52,6 +52,22 @@ const App = () => {
 };
 ```
 
+### with next.js app directory
+
+```javascript
+"use client";
+
+import { Fade } from "react-swift-reveal";
+
+export default function Home() {
+  return (
+    <Fade>
+      <h1>hello world</h1>
+    </Fade>
+  );
+}
+```
+
 both examples will fade in the element as it enters the viewport.
 
 ## Available Animations
@@ -82,4 +98,4 @@ both examples will fade in the element as it enters the viewport.
 
 # Support
 
-If you like this project, please consider supporting it by  giving it a star.
+If you like this project, please consider supporting it by giving it a star.
