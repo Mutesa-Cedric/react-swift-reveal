@@ -68,6 +68,22 @@ export default function Home() {
 }
 ```
 
+## Short Demo
+
+here is a short demo of the library in action
+
+<iframe
+  src="https://player.cloudinary.com/embed/?public_id=react-swift-reveal-demo&cloud_name=mutesa-personal"
+  width="720"
+  height="460"
+  style={{
+    borderRadius: "8px",
+    marginTop: "20px",
+  }}
+  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+  frameborder="0"
+/>
+
 both examples will fade in the element as it enters the viewport.
 
 ## Available Animations
