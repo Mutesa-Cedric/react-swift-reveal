@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { string, object, number, bool, func, oneOfType, oneOf, shape, element } from 'prop-types';
 

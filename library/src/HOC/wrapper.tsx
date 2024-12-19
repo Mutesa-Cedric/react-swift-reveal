@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 
 import RevealBase from '../lib/Base.jsx'
