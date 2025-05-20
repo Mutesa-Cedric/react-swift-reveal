@@ -49,8 +49,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub",
+    "build": "tsup",
+    "dev": "tsup --watch",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
@@ -78,8 +78,8 @@
     "pnpm": "^8.7.6",
     "rimraf": "^5.0.1",
     "simple-git-hooks": "^2.9.0",
+    "tsup": "^8.5.0",
     "typescript": "^5.7.2",
-    "unbuild": "^3.0.1",
     "vite": "^4.4.9",
     "vitest": "^0.34.5"
   },

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 /* eslint-disable no-mixed-operators */
-'use client'
+"use client"
 
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { cascade, collapseend, disableSsr, fadeOutEnabled, globalHide, hideAll, namespace, observerMode, ssr } from './defaultConfigs'
