@@ -1,7 +1,7 @@
 {
   "name": "react-swift-reveal",
   "type": "module",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "packageManager": "pnpm@8.7.6",
   "description": "The easiest way to add reveal animations to your React applications as the elements enter viewport. it includes Both on scroll and simple reveal animations.",
   "author": "Mutesa Cedric <mutesacedric@gmail.com>",
@@ -60,14 +60,16 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "react": "^18.2.0"
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^1.0.0-beta.0",
     "@antfu/ni": "^0.21.8",
     "@antfu/utils": "^0.7.6",
     "@types/node": "^20.6.3",
-    "@types/react": "^18.2.22",
+    "@types/react": "^19.1.4",
     "bumpp": "^9.2.0",
     "eslint": "^8.49.0",
     "eslint-define-config": "^1.23.0",
