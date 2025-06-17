@@ -9,19 +9,19 @@ for more, check the [documentation](https://react-swift-reveal.vercel.app/)
 with npm:
 
 ```bash
-npm install react-swift-reveal
+npm install react-swift-reveal@latest
 ```
 
 with yarn:
 
 ```bash
-yarn add react-swift-reveal
+yarn add react-swift-reveal@latest
 ```
 
 with pnpm:
 
 ```bash
-pnpm add react-swift-reveal
+pnpm add react-swift-reveal@latest
 ```
 
 ## Usage

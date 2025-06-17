@@ -4,28 +4,35 @@ title: Roll Animation
 
 # Roll Animation
 
-The **Roll** animation adds a smooth rolling effect to elements, creating a visually appealing transition.
+The **Roll** animation creates a rolling entrance effect, making elements appear to roll in from the side.
+
+## Demo
+
+<AnimationDemo type="roll">
+  This element will roll in as it enters the viewport.
+</AnimationDemo>
 
 ## Usage
 
 To use the **Roll** animation, import it from `react-swift-reveal`:
 
 ```jsx filename="App.jsx" {3} copy
-import { Roll } from "react-swift-reveal";
+import { Roll } from 'react-swift-reveal';
 
 const App = () => {
   return (
     <Roll>
       <div className="box">
-        This element will roll as it enters the viewport.
+        This element will roll in as it enters the viewport.
       </div>
     </Roll>
   );
 };
-
-export default App;
 ```
 
 ## Props
 
-The **Roll** animation doesn't have any specific props, but it accepts all the props that are availalbe to all animations. You can read more about them [here](/animations/props/).
+Roll animation doesn't have any specific props of its own.
+it has all the props of [Swift Reveal Props](/animations/props).
+
+You can refer to the [Swift Reveal Props](/animations/props) documentation for a list of all available props.

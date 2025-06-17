@@ -4,28 +4,35 @@ title: Rotate Animation
 
 # Rotate Animation
 
-The **Rotate** animation brings a dynamic rotation effect to elements, adding a visually engaging transition.
+The **Rotate** animation creates a rotating entrance effect, making elements appear to spin in as they enter the viewport.
+
+## Demo
+
+<AnimationDemo type="rotate">
+  This element will rotate in as it enters the viewport.
+</AnimationDemo>
 
 ## Usage
 
 To use the **Rotate** animation, import it from `react-swift-reveal`:
 
 ```jsx filename="App.jsx" {3} copy
-import { Rotate } from "react-swift-reveal";
+import { Rotate } from 'react-swift-reveal';
 
 const App = () => {
   return (
     <Rotate>
       <div className="box">
-        This element will rotate as it enters the viewport.
+        This element will rotate in as it enters the viewport.
       </div>
     </Rotate>
   );
 };
-
-export default App;
 ```
 
 ## Props
 
-The **Rotate** animation doesn't have any specific props, but it accepts all the props that are available to all animations. You can read more about them in the [Swift Reveal Props documentation](/animations/props/).
+Rotate animation doesn't have any specific props of its own.
+it has all the props of [Swift Reveal Props](/animations/props).
+
+You can refer to the [Swift Reveal Props](/animations/props) documentation for a list of all available props.

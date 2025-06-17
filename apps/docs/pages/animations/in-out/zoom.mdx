@@ -4,14 +4,20 @@ title: Zoom Animation
 
 # Zoom Animation
 
-The **Zoom** animation adds a dynamic zoom-in effect to elements, creating an engaging visual transition.
+The **Zoom** animation creates a smooth zooming entrance effect, making elements appear to scale up as they enter the viewport.
+
+## Demo
+
+<AnimationDemo type="zoom">
+  This element will zoom in as it enters the viewport.
+</AnimationDemo>
 
 ## Usage
 
 To use the **Zoom** animation, import it from `react-swift-reveal`:
 
 ```jsx filename="App.jsx" {3} copy
-import { Zoom } from "react-swift-reveal";
+import { Zoom } from 'react-swift-reveal';
 
 const App = () => {
   return (
@@ -22,10 +28,11 @@ const App = () => {
     </Zoom>
   );
 };
-
-export default App;
 ```
 
 ## Props
 
-The **Zoom** animation doesn't have any specific props, but it accepts all the props that are available to all animations. You can read more about them in the [Swift Reveal Props documentation](/animations/props/).
+Zoom animation doesn't have any specific props of its own.
+it has all the props of [Swift Reveal Props](/animations/props).
+
+You can refer to the [Swift Reveal Props](/animations/props) documentation for a list of all available props.

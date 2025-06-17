@@ -4,28 +4,35 @@ title: Slide Animation
 
 # Slide Animation
 
-The **Slide** animation introduces a smooth sliding effect to elements, creating a visually appealing transition.
+The **Slide** animation creates a smooth sliding entrance effect, making elements appear to slide in from the side.
+
+## Demo
+
+<AnimationDemo type="slide">
+  This element will slide in as it enters the viewport.
+</AnimationDemo>
 
 ## Usage
 
 To use the **Slide** animation, import it from `react-swift-reveal`:
 
 ```jsx filename="App.jsx" {3} copy
-import { Slide } from "react-swift-reveal";
+import { Slide } from 'react-swift-reveal';
 
 const App = () => {
   return (
     <Slide>
       <div className="box">
-        This element will slide as it enters the viewport.
+        This element will slide in as it enters the viewport.
       </div>
     </Slide>
   );
 };
-
-export default App;
 ```
 
 ## Props
 
-The **Slide** animation doesn't have any specific props, but it accepts all the props that are available to all animations. You can read more about them in the [Swift Reveal Props documentation](/animations/props/).
+Slide animation doesn't have any specific props of its own.
+it has all the props of [Swift Reveal Props](/animations/props).
+
+You can refer to the [Swift Reveal Props](/animations/props) documentation for a list of all available props.
