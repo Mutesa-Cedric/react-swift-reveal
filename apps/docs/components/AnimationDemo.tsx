@@ -252,20 +252,20 @@ const animations = {
     flip: `
     @keyframes flip {
       from {
-        transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        transform: perspective(100px) rotate3d(0, 1, 0, -90deg);
         animation-timing-function: ease-out;
         opacity: 0;
       }
       40% {
-        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        transform: perspective(100px) rotate3d(0, 1, 0, -45deg);
         animation-timing-function: ease-out;
       }
       50% {
-        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        transform: perspective(100px) rotate3d(0, 1, 0, -40deg);
         animation-timing-function: ease-in;
       }
       to {
-        transform: perspective(400px);
+        transform: perspective(100px);
         animation-timing-function: ease-in;
         opacity: 1;
       }
@@ -352,6 +352,8 @@ interface AnimationDemoProps {
 
 export function AnimationDemo({ type, children }: AnimationDemoProps) {
     const [isClient, setIsClient] = useState(false)
+    const [isPlaying, setIsPlaying] = useState(false)
+    const [uniqueId] = useState(() => `animation-demo-${Math.random().toString(36).substring(2, 11)}`)
 
     useEffect(() => {
         setIsClient(true)
@@ -364,18 +366,47 @@ export function AnimationDemo({ type, children }: AnimationDemoProps) {
         }
     }, [type])
 
+    const handlePlay = () => {
+        setIsPlaying(true)
+        // Reset animation by removing and re-adding the element
+        const element = document.getElementById(uniqueId)
+        if (element) {
+            element.style.animation = 'none'
+            element.offsetHeight // Trigger reflow
+            element.style.animation = `${type} 1s ease`
+        }
+    }
+
     return (
-        <div style={{ padding: '1rem', display: 'flex', justifyContent: 'center' }}>
+        <div style={{ padding: '1rem' }}>
             <div style={{
                 padding: '1rem',
                 margin: '1rem',
                 backgroundColor: '#3b82f6',
                 color: 'white',
                 borderRadius: '0.5rem',
-                animation: isClient ? `${type} 1s ease infinite` : 'none'
-            }}>
+                animation: isClient && isPlaying ? `${type} 1s ease` : 'none',
+                transformStyle: 'preserve-3d',
+                backfaceVisibility: 'visible'
+            }} id={uniqueId}>
                 {children}
             </div>
+
+            <button
+                onClick={handlePlay}
+                style={{
+                    padding: '0.5rem 1rem',
+                    backgroundColor: '#3b82f6',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '0.25rem',
+                    cursor: 'pointer',
+                    display: 'block',
+                    margin: '0 auto'
+                }}
+            >
+                Play Animation
+            </button>
         </div>
     )
 } 
