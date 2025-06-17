@@ -4,20 +4,26 @@ title: Jello Animation
 
 # Jello Animation
 
-The **Jello** animation adds a fun and wobbly effect to elements, creating a lively and dynamic transition.
+The **Jello** animation creates a jello-like effect by applying a series of skew transformations.
+
+## Demo
+
+<AnimationDemo type="jello">
+  This element will jiggle like jello as it enters the viewport.
+</AnimationDemo>
 
 ## Usage
 
 To use the **Jello** animation, import it from `react-swift-reveal`:
 
-```jsx filename="demo.js" {3} copy
+```jsx filename="App.jsx" {3} copy
 import { Jello } from 'react-swift-reveal';
 
 const App = () => {
   return (
     <Jello>
       <div className="box">
-        This element will jello as it enters the viewport.
+        This element will jiggle like jello as it enters the viewport.
       </div>
     </Jello>
   );
@@ -26,4 +32,7 @@ const App = () => {
 
 ## Props
 
-The **Jello** animation doesn't have any specific props, but it accepts all the props that are available to all animations. You can read more about them in the [Swift Reveal Props documentation](/animations/props/).
+Jello animation doesn't have any specific props of its own.
+it has all the props of [Swift Reveal Props](/animations/props).
+
+You can refer to the [Swift Reveal Props](/animations/props) documentation for a list of all available props.

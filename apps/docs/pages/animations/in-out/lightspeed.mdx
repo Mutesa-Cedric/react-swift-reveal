@@ -1,25 +1,31 @@
 ---
-title: LightSpeed Animation
+title: Lightspeed Animation
 ---
 
-# LightSpeed Animation
+# Lightspeed Animation
 
-The **LightSpeed** animation introduces a swift and dynamic movement to elements, creating a dynamic and eye-catching effect.
+The **Lightspeed** animation creates a high-speed entrance effect, making elements appear to zoom in from the side with a blur effect.
+
+## Demo
+
+<AnimationDemo type="lightspeed">
+  This element will zoom in at lightspeed as it enters the viewport.
+</AnimationDemo>
 
 ## Usage
 
-To use the **LightSpeed** animation, import it from `react-swift-reveal`:
+To use the **Lightspeed** animation, import it from `react-swift-reveal`:
 
 ```jsx filename="App.jsx" {3} copy
-import { LightSpeed } from 'react-swift-reveal';
+import { Lightspeed } from 'react-swift-reveal';
 
 const App = () => {
   return (
-    <LightSpeed>
+    <Lightspeed>
       <div className="box">
-        This element will move with lightspeed as it enters the viewport.
+        This element will zoom in at lightspeed as it enters the viewport.
       </div>
-    </LightSpeed>
+    </Lightspeed>
   );
 };
 
@@ -28,7 +34,7 @@ export default App;
 
 ## Props
 
-LightSpeed animation doesn't have any specific props of its own.
+Lightspeed animation doesn't have any specific props of its own.
 it has all the props of [Swift Reveal Props](/animations/props).
 
 You can refer to the [Swift Reveal Props](/animations/props) documentation for a list of all available props.

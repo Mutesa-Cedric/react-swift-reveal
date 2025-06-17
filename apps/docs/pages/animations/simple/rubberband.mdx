@@ -4,7 +4,13 @@ title: RubberBand Animation
 
 # RubberBand Animation
 
-The **RubberBand** animation adds a playful and elastic effect to elements, creating a visually engaging transition.
+The **RubberBand** animation creates a rubber-like effect by stretching and squashing the element.
+
+## Demo
+
+<AnimationDemo type="rubberband">
+  This element will stretch like a rubber band as it enters the viewport.
+</AnimationDemo>
 
 ## Usage
 
@@ -17,7 +23,7 @@ const App = () => {
   return (
     <RubberBand>
       <div className="box">
-        This element will rubberband as it enters the viewport.
+        This element will stretch like a rubber band as it enters the viewport.
       </div>
     </RubberBand>
   );
@@ -26,4 +32,7 @@ const App = () => {
 
 ## Props
 
-The **RubberBand** animation doesn't have any specific props, but it accepts all the props that are available to all animations. You can read more about them in the [Swift Reveal Props documentation](/animations/props/).
+RubberBand animation doesn't have any specific props of its own.
+it has all the props of [Swift Reveal Props](/animations/props).
+
+You can refer to the [Swift Reveal Props](/animations/props) documentation for a list of all available props.
