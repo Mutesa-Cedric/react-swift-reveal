@@ -432,10 +432,16 @@ const RevealBase: React.FC<RevealProps> = (props) => {
     }, [when, fraction, props, isOn, disabled, collapse, reveal])
 
     let mount = true
-    if (!state.hasAppeared)
-        mount = !mountOnEnter || isOn
-    else
-        mount = !unmountOnExit || !state.hasExited || isOn
+
+    // When 'when' is explicitly false, don't mount at all
+    if (when === false) {
+        mount = false
+    } else {
+        if (!state.hasAppeared)
+            mount = !mountOnEnter || isOn
+        else
+            mount = !unmountOnExit || !state.hasExited || isOn
+    }
 
     const child = getChild()
     if (React.isValidElement(child) && typeof (child as any).ref === 'function')

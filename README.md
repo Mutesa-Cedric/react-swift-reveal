@@ -2,7 +2,7 @@
 
 react-swift-reveal is a React component library and animation framework for animating elements as they enter the viewport.
 
-for more, check the [documentation](https://react-swift-reveal.vercel.app/)
+for more, check the [documentation](https://rsr.mcedric.dev/)
 
 ## Installation
 

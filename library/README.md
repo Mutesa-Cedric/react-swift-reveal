@@ -1,25 +1,25 @@
 # react-swift-reveal
 
-react-swift-reveal is a React component library and animation framework for animating elements as they enter the viewport or on scroll. you can learn more about the library [here(documention)](https://react-swift-reveal.vercel.app/) or view [stackblitz demo](https://stackblitz.com/edit/react-swift-reveal?file=src%2FApp.tsx)
+react-swift-reveal is a React component library and animation framework for animating elements as they enter the viewport or on scroll. you can learn more about the library [here(documention)](https://rsr.mcedric.dev/) or view [stackblitz demo](https://stackblitz.com/edit/react-swift-reveal?file=src%2FApp.tsx)
 
 ## Installation
 
 with npm:
 
 ```bash
-npm install react-swift-reveal
+npm install react-swift-reveal@latest
 ```
 
 with yarn:
 
 ```bash
-yarn add react-swift-reveal
+yarn add react-swift-reveal@latest
 ```
 
 with pnpm:
 
 ```bash
-pnpm add react-swift-reveal
+pnpm add react-swift-reveal@latest
 ```
 
 ## Usage
@@ -69,7 +69,6 @@ const App = () => {
 
 both examples will fade in the element as it enters the viewport.
 
-
 ## Available Animations
 
 - Fade
@@ -95,4 +94,3 @@ both examples will fade in the element as it enters the viewport.
 - Pop
 - Spin
 - Jump
-
