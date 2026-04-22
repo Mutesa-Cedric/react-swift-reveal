@@ -9,7 +9,7 @@
   "homepage": "https://rsr.mcedric.dev/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mutesa-Cedric/react-swift-reveal.git.git"
+    "url": "git+https://github.com/Mutesa-Cedric/react-swift-reveal.git"
   },
   "bugs": "https://github.com/Mutesa-Cedric/react-swift-reveal.git/issues",
   "keywords": [
