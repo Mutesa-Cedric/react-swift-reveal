@@ -66,6 +66,7 @@ const RevealBase: React.FC<RevealProps> = (props) => {
     const savedChildRef = useRef<React.ReactElement | false>(false)
     const childRef = useRef<((node: any) => void) | null>(null)
     const observerRef = useRef<IntersectionObserver | null>(null)
+    const prevFractionRef = useRef(fraction)
     const animationEndTimeoutRef = useRef<number | undefined>(undefined)
     const onRevealTimeoutRef = useRef<number | undefined>(undefined)
     const isListenerRef = useRef(false)
@@ -137,10 +138,10 @@ const RevealBase: React.FC<RevealProps> = (props) => {
                 return
             }
 
-            observerRef.current = new IntersectionObserver(handleObserve, { threshold: props.fraction })
+            observerRef.current = new IntersectionObserver(handleObserve, { threshold: fraction })
             observerRef.current.observe(el.current)
         }
-    }, [handleObserve])
+    }, [handleObserve, fraction])
 
     const reveal = useCallback((_event?: Event | boolean) => {
         const inView = typeof _event === 'boolean' ? _event : false
@@ -406,8 +407,10 @@ const RevealBase: React.FC<RevealProps> = (props) => {
         if (when !== undefined)
             isShownRef.current = !!when
 
-        if (fraction !== props.fraction)
+        if (fraction !== prevFractionRef.current) {
+            prevFractionRef.current = fraction
             observe(props, true)
+        }
 
         if (!isOn && props.onExited && 'exit' in props && props.exit === false) {
             props.onExited()
